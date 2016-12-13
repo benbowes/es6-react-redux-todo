@@ -4,4 +4,4 @@
 
 export { counter } from './counter';
 export { items } from './items';
-export { warningColor } from './warningColor';
+export { warningColour } from './warningColour';

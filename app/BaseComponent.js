@@ -10,19 +10,18 @@ import * as styles from './BaseComponent.scss';
 /**
 * @description Stateless function component. The root component...
 * note: redux `connect()` injects `store.dispatch into `props`
-* note: styles prefixed with `sg-` are coming in from a global stylesheet
-* @returns {JSX} */
+* note: styles prefixed with `sg-` are coming in from a global stylesheet */
 
-export const BaseComponent = ({ counter, items, warningColor, dispatch }) =>
+export const BaseComponent = ({ counter, items, warningColour, dispatch }) =>
 
   <section
     className={styles.todos}
-    style={{ borderTopColor: warningColor.color }}
+    style={{ borderTopColor: warningColour.colour }}
   >
 
     <TodosHeader
       counter={counter}
-      warningColor={warningColor}
+      warningColour={warningColour}
     />
 
     {(counter === 0) && <p>Oh my, you`ve been busy...</p>}
@@ -48,7 +47,7 @@ export const BaseComponent = ({ counter, items, warningColor, dispatch }) =>
 export default connect(state => ({
   counter: state.counter,
   items: state.items,
-  warningColor: state.warningColor,
+  warningColour: state.warningColour,
 }))(BaseComponent);
 
 
@@ -58,8 +57,8 @@ BaseComponent.propTypes = {
   items: PropTypes.arrayOf(
     PropTypes.string,
   ),
-  warningColor: PropTypes.shape({
+  warningColour: PropTypes.shape({
     count: PropTypes.number,
-    color: PropTypes.string,
+    colour: PropTypes.string,
   }),
 };

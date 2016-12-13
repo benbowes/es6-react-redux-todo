@@ -19,7 +19,7 @@ describe('<BaseComponent />', () => {
       <BaseComponent
         items={['Go to park', 'Eat cheese']}
         counter={2}
-        warningColor={{ count: 0, color: '#ff0000' }}
+        warningColour={{ count: 0, colour: '#ff0000' }}
         dispatch={fakeDispatchFunction}
       />,
     );
@@ -56,7 +56,7 @@ describe('<BaseComponent />', () => {
       <BaseComponent
         items={[]}
         counter={0}
-        warningColor={{ count: 0, color: '#ff0000' }}
+        warningColour={{ count: 0, colour: '#ff0000' }}
         dispatch={fakeDispatchFunction}
       />,
     );

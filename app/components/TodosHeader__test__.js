@@ -9,7 +9,7 @@ const shallowRenderer = ReactTestUtils.createRenderer();
 describe('<TodosHeader />', () => {
   it('It should render as expected when at several item\'s are supplied', () => {
 
-    shallowRenderer.render( <TodosHeader counter={2} warningColor={{ count: 0, color: '#ff0000' }} /> );
+    shallowRenderer.render( <TodosHeader counter={2} warningColour={{ count: 0, colour: '#ff0000' }} /> );
 
     const result = shallowRenderer.getRenderOutput();
 

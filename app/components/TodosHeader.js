@@ -6,7 +6,7 @@ import * as styles from './TodosHeader.scss';
 * coming in from a global stylesheet
 * @returns {JSX} */
 
-const TodosHeader = ({ counter, warningColor }) => (
+const TodosHeader = ({ counter, warningColour }) => (
 
   <header className={`sg-row ${styles.todosHeader}`}>
     <h1 className={styles.todosHeading}>
@@ -14,7 +14,7 @@ const TodosHeader = ({ counter, warningColor }) => (
     </h1>
     <span
       className={styles.todosCounter}
-      style={{ color: warningColor.color }}
+      style={{ color: warningColour.colour }}
     >
       {counter} items
     </span>
@@ -23,9 +23,9 @@ const TodosHeader = ({ counter, warningColor }) => (
 
 TodosHeader.propTypes = {
   counter: PropTypes.number,
-  warningColor: PropTypes.shape({
+  warningColour: PropTypes.shape({
     count: PropTypes.number,
-    color: PropTypes.string,
+    colour: PropTypes.string,
   }),
 };
 

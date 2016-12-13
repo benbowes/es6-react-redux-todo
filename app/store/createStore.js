@@ -1,8 +1,9 @@
 import { createStore, compose, combineReducers } from 'redux';
-import { counter, items, warningColor } from '../reducers';
+import { counter, items, warningColour } from '../reducers';
+import * as colours from '../constants/colours';
 
 // Get all reducers... currently only one
-const reducers = combineReducers({ counter, items, warningColor });
+const reducers = combineReducers({ counter, items, warningColour });
 
 // Set initial state
 const initialState = {
@@ -12,9 +13,9 @@ const initialState = {
     'Eat some cheese',
     'Host a party',
   ],
-  warningColor: {
+  warningColour: {
     count: 3,
-    color: '',
+    colour: colours.DEFAULT_COLOUR,
   },
 };
 
