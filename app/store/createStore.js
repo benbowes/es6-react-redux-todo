@@ -2,10 +2,8 @@ import { createStore, compose, combineReducers } from 'redux';
 import { counter, items, warningColour } from '../reducers';
 import * as colours from '../constants/colours';
 
-// Get all reducers... currently only one
 const reducers = combineReducers({ counter, items, warningColour });
 
-// Set initial state
 const initialState = {
   counter: 3,
   items: [

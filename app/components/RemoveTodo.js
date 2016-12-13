@@ -10,10 +10,6 @@ const RemoveTodoHandler = ( dispatch, index ) => {
   dispatch({ type: 'REMOVE_ITEM', payload: index });
 };
 
-/**
-* @description Stateless function component
-* @returns {JSX} */
-
 const RemoveTodo = ({ buttonTitle, index, dispatch }) => {
   return (
     <Button

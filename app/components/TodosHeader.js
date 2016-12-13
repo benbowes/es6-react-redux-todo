@@ -3,8 +3,7 @@ import * as styles from './TodosHeader.scss';
 
 /**
 * @description Stateless function component. Styles prefixed with `sg-` are
-* coming in from a global stylesheet
-* @returns {JSX} */
+* coming in from a global stylesheet  */
 
 const TodosHeader = ({ counter, warningColour }) => (
 

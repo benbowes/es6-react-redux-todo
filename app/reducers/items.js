@@ -16,7 +16,7 @@ export const items = (state = [], action) => {
         action.payload,
       ];
 
-      // remove item from state at given index
+    // remove item from state at given index
     case 'REMOVE_ITEM':
       return [
         ...state.slice( 0, action.payload ),

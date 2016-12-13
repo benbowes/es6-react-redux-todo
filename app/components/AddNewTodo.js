@@ -3,8 +3,7 @@ import Button from './common/Button';
 import * as styles from './AddNewTodo.scss';
 
 /**
-* @description Class component. Styles prefixed with `sg-` are coming in from a global stylesheet
-* @returns {JSX} */
+* @description Class component. Styles prefixed with `sg-` are coming in from a global stylesheet */
 
 class AddNewTodo extends Component {
 
