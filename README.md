@@ -7,7 +7,6 @@ Made with lashings of joy.
 
 [Demo link](http://benbowes.github.io/my-es6-react-redux-todo/)
 
-
 #### 1) Install the dependencies.
 
 ```
