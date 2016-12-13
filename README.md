@@ -1,7 +1,7 @@
 
-# My current ES6, React, Redux, SASS, Webpack, Eslint and Mocha+Expect unit test setup (May 2016)
+# An ES6, React, Redux, CSS Modules (with SASS), Webpack, Eslint and Mocha/Expect unit test setup
 
-![Build status](https://api.travis-ci.org/benbowes/get-or-else-use-default-es5.svg)
+![Build status](https://api.travis-ci.org/benbowes/my-es6-react-redux-todo.svg?branch=master)
 
 Made with lashings of joy.
 
