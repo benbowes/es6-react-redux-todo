@@ -2,7 +2,7 @@ import 'ignore-styles';
 import expect from 'expect';
 import React from 'react';
 import ReactTestUtils from 'react-addons-test-utils';
-import { BaseComponent, getUniqueIteratorKey } from './BaseComponent';
+import { BaseComponent } from './BaseComponent';
 import TodosHeader from './components/TodosHeader';
 import Label from './components/common/Label';
 import RemoveTodo from './components/RemoveTodo';
@@ -12,11 +12,6 @@ const shallowRenderer = ReactTestUtils.createRenderer();
 const fakeDispatchFunction = () => false;
 
 describe('<BaseComponent />', () => {
-
-  it('getUniqueIteratorKey should return a string without spaces', () => {
-    expect( getUniqueIteratorKey( 'Some kind of wonderful', 5 ) ).toEqual( 'Some_kind_of_wonderful_5' );
-    expect( getUniqueIteratorKey( 'I BE SHOUTING WID MY ALL CAPS', 2 ) ).toEqual( 'I_BE_SHOUTING_WID_MY_ALL_CAPS_2' );
-  });
 
   it('It should render as expected when several items are supplied', () => {
 

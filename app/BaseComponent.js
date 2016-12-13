@@ -4,22 +4,8 @@ import Label from './components/common/Label';
 import RemoveTodo from './components/RemoveTodo';
 import TodosHeader from './components/TodosHeader';
 import AddNewTodo from './components/AddNewTodo';
+import getUniqueIteratorKey from './helpers/getUniqueIteratorKey';
 import * as styles from './BaseComponent.scss';
-
-/**
-* @description combines `props.item[index]` {String} with an iteration `index` {Number} to
-* create a unique key.
-* note: Spaces are replaced with a `_` character.
-* @param itemString {String}
-* @param index {Number}
-* @returns {String} unique key
-* @example
-* // returns "Something_Loved-up_And_Excellent_4"
-* getUniqueIteratorKey("Something Loved-up And Excellent", 4); */
-
-export const getUniqueIteratorKey = (itemString, index) => {
-  return `${itemString.replace(/ /g, '_')}_${index}`;
-};
 
 /**
 * @description Stateless function component. The root component...
@@ -69,7 +55,9 @@ export default connect(state => ({
 BaseComponent.propTypes = {
   dispatch: PropTypes.func,
   counter: PropTypes.number,
-  items: PropTypes.arrayOf(PropTypes.string),
+  items: PropTypes.arrayOf(
+    PropTypes.string,
+  ),
   warningColor: PropTypes.shape({
     count: PropTypes.number,
     color: PropTypes.string,

@@ -18,10 +18,10 @@ const initialState = {
   },
 };
 
-const todoStore = createStore(
+const createdStore = createStore(
   reducers,
   initialState,
   compose( window.devToolsExtension ? window.devToolsExtension() : f => f ),
 );
 
-export default todoStore;
+export default createdStore;
