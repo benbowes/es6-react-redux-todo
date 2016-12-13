@@ -1,0 +1,23 @@
+{
+  "extends": "airbnb",
+  "env": {
+    "browser": true,
+    "es6": true,
+    "mocha": true,
+    "node": true
+  },
+  "globals": {
+    "console": false
+  },
+  "rules": {
+    "arrow-body-style": 0,
+    "comma-dangle": 1,
+    "max-len": 0,
+    "padded-blocks": 0,
+    "space-in-parens": 0,
+    "import/prefer-default-export": 1,
+    "import/no-extraneous-dependencies": 0,
+    "import/no-named-as-default": 0,
+    "react/jsx-filename-extension": 0,
+  }
+}
