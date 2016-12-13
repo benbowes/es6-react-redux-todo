@@ -7,7 +7,7 @@ import Button from './common/Button';
 * @param index {number} injected as a prop via BaseComponent's render method  */
 
 const RemoveTodoHandler = ( dispatch, index ) => {
-  dispatch({ type: 'REMOVE_ITEM', payload: index });
+  console.log({ type: 'REMOVE_ITEM', payload: index });
 };
 
 const RemoveTodo = ({ buttonTitle, index, dispatch }) => {

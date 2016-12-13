@@ -1,5 +1,4 @@
 import React, { PropTypes } from 'react';
-import { connect } from 'react-redux';
 import Label from './components/common/Label';
 import RemoveTodo from './components/RemoveTodo';
 import TodosHeader from './components/TodosHeader';
@@ -9,10 +8,9 @@ import * as styles from './BaseComponent.scss';
 
 /**
 * @description Stateless function component. The root component...
-* note: redux `connect()` injects `store.dispatch into `props`
 * note: styles prefixed with `sg-` are coming in from a global stylesheet */
 
-export const BaseComponent = ({ counter, items, warningColour, dispatch }) =>
+export const BaseComponent = ({ counter, items, warningColour }) =>
 
   <section
     className={styles.todos}
@@ -32,27 +30,15 @@ export const BaseComponent = ({ counter, items, warningColour, dispatch }) =>
         <RemoveTodo
           buttonTitle={'Remove this item'}
           index={index}
-          dispatch={dispatch}
         />
       </div>,
     )}
 
-    <AddNewTodo dispatch={dispatch} />
+    <AddNewTodo />
 
   </section>;
 
-
-// Inject state from redux store into BaseComponent as react `props`
-// Note: when the second param in connect() is ommitted, store.dispatch is injected into props
-export default connect(state => ({
-  counter: state.counter,
-  items: state.items,
-  warningColour: state.warningColour,
-}))(BaseComponent);
-
-
 BaseComponent.propTypes = {
-  dispatch: PropTypes.func,
   counter: PropTypes.number,
   items: PropTypes.arrayOf(
     PropTypes.string,
@@ -62,3 +48,5 @@ BaseComponent.propTypes = {
     colour: PropTypes.string,
   }),
 };
+
+export default BaseComponent;

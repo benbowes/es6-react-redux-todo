@@ -1,12 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
 import BaseComponent from './BaseComponent';
-import createdStore from './store/createStore';
+import * as colours from './constants/colours';
+
+const initialState = {
+  counter: 3,
+  items: [
+    'Go to the park',
+    'Eat some cheese',
+    'Host a party',
+  ],
+  warningColour: {
+    count: 3,
+    colour: colours.DEFAULT_COLOUR,
+  },
+};
 
 ReactDOM.render(
-  <Provider store={createdStore}>
-    <BaseComponent />
-  </Provider>,
+  <BaseComponent {...initialState} />,
   document.getElementById('root'),
 );
