@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server --progress --host 0.0.0.0 --port 3001",
     "lint": "eslint ./app",
-    "test": "./node_modules/.bin/mocha --compilers js:./node_modules/babel-core/register 'app/**/*__test__.js'",
+    "test": "mocha --compilers js:babel-core/register 'app/**/*__test__.js'",
     "deploy": ".bin/deploy.sh"
   },
   "engines": {
