@@ -6,16 +6,12 @@ import Button from './common/Button';
 * @param dispatch {function} a redux `store.dispatch` reference
 * @param index {number} injected as a prop via BaseComponent's render method  */
 
-const RemoveTodoHandler = ( dispatch, index ) => {
-  dispatch({ type: 'REMOVE_ITEM', payload: index });
-};
-
 const RemoveTodo = ({ buttonTitle, index, dispatch }) => {
   return (
     <Button
       buttonTitle={buttonTitle}
       label="&#10005;"
-      clickHandler={() => RemoveTodoHandler( dispatch, index )}
+      clickHandler={() => dispatch({ type: 'REMOVE_ITEM', payload: index })}
     />
   );
 };
